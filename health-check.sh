@@ -57,11 +57,3 @@ do
 done
 
 if [[ $commit == true ]]
-then
-  # Let's make Darrell the most productive person on GitHub.
-  git config --global user.name 'dpatandin'
-  git config --global user.email 'darrell.patandin@digidentity.com'
-  git add -A --force logs/
-  git commit -am '[Automated] Update Health Check Logs'
-  git push
-fi
