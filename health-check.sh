@@ -1,6 +1,5 @@
-# In the original repository we'll just print the result of status checks,
-# without committing. This avoids generating several commits that would make
-# later upstream merges messy for anyone who forked us.
+while true; do
+
 commit=true
 origin=$(git remote get-url origin)
 if [[ $origin == *statsig-io/statuspage* ]]
@@ -57,3 +56,8 @@ do
 done
 
 if [[ $commit == true ]]
+
+  echo "Finished one round. Sleeping for a specified time before next run."
+  sleep 600  # Sleeps for 10 minutes; you can adjust this value as per your needs.
+
+done
