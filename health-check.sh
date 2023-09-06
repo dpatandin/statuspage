@@ -55,9 +55,8 @@ do
   fi
 done
 
-if [[ $commit == true ]]
+echo "Finished one round. Sleeping for a specified time before next run."
+sleep 600  # Sleeps for 10 minutes; you can adjust this value as per your needs.
 
-  echo "Finished one round. Sleeping for a specified time before next run."
-  sleep 600  # Sleeps for 10 minutes; you can adjust this value as per your needs.
+done
 
-fi
