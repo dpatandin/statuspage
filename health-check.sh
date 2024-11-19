@@ -10,7 +10,7 @@ fi
 KEYSARRAY=()
 URLSARRAY=()
 
-urlsConfig="./urls.cfg"
+urlsConfig="/Users/dpatandin/Documents/GitHub/statuspage/urls.cfg"
 echo "Reading $urlsConfig"
 while read -r line
 do
@@ -47,7 +47,7 @@ do
   dateTime=$(date +'%Y-%m-%d %H:%M')
   if [[ $commit == true ]]
   then
-    echo $dateTime, $result >> "logs/${key}_report.log"
+    echo $dateTime, $result >> "/Users/dpatandin/Documents/GitHub/statuspage/logs/${key}_report.log"
     # By default we keep 2000 last log entries.  Feel free to modify this to meet your needs.
     echo "$(tail -2000 logs/${key}_report.log)" > "logs/${key}_report.log"
   else
